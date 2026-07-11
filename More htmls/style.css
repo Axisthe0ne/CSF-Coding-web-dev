@@ -1,0 +1,23 @@
+.bluebox {
+    background-color:blue;
+    height: 47px;
+    width:47px;
+}
+
+.borderbox {
+    height:45px;
+    width:45px;
+    border-style:solid;
+    border-color: lightpink;
+    border-radius:px;
+
+}
+
+.creativebox {
+    border-style:dotted;
+    border-color:rgb(180, 0, 27);
+    border-radius:4px;
+    background-color:pink;
+    height:50px;
+    width:50px;
+}
