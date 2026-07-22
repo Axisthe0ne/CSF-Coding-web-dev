@@ -1,0 +1,68 @@
+.cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-style: solid;
+    border-color:#232700;
+    opacity: 85%;
+}
+
+.header {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+}
+
+.header {
+    background-color:rgb(255, 153, 0);
+}
+
+q {
+    opacity:0.7;
+}
+
+body {
+    background-color: rgb(189, 168, 149);
+    color: #232700;
+}
+
+hr {
+    border:none;
+    border-top:#596300 solid 1px;
+    border-bottom:#232700 solid 2px;
+}
+
+.listcontain {
+    background-color:rgb(134, 110, 87);
+    border-radius: 5px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border-style:solid;
+    border-color:#232700;
+}
+
+
+.steplist {
+    background-color:rgb(134, 110, 87);
+    border-radius: 5px;
+    padding-left:8px;
+    padding-right:8px;
+    padding-top:2px;
+    padding-bottom:2px;
+    margin-right:50vw;
+    border-style:solid;
+    border-color:#232700;
+}
+
+.photo_1 {
+    Border-style: solid;
+    border-color: #232700;
+    border-radius: 4px;
+    
+}
