@@ -39,33 +39,26 @@
         <div class="bingo_card" id="card1">Card9</div>
         <div class="bingo_card" id="card1">Card10</div>
         <div class="bingo_card" id="card1">Card11</div>
-        <div class="bingo_card" id="card1">Card12</div>
-        <div class="bingo_card" id="card1">Card13</div>
-        <div class="bingo_card" id="card1">Card14</div>
-        <div class="bingo_card" id="card1">Card15</div>
-        <div class="bingo_card" id="card1">Card16</div>
-        <div class="bingo_card" id="card1">Card17</div>
-        <div class="bingo_card" id="card1">Card18</div>
-        <div class="bingo_card" id="card1">Card19</div>
-        <div class="bingo_card" id="card1">Card20</div>
-        <div class="bingo_card" id="card1">Card21</div>
-        <div class="bingo_card" id="card1">Card22</div>
-        <div class="bingo_card" id="card1">Card23</div>
-        <div class="bingo_card" id="card1">Card24</div>
-        <div class="bingo_card" id="card1">Card25</div>
 
-    </div>
+
+    Name: <input type="text" id="name">
+    <input type="button" value="submit" id="submit-name" onclick="sayHello()">
+<br>
+<br>
+    Nickname: <input type="text" id="nickname">
+    <input type="button" value="submit" id="submit-nick" onclick="stateNick()">
+        
 <script>
-   alert("hi");
-   const a = 5;
-   const b = 4;
+ function sayHello(){
 
-   const c = "four";
+    let username = document.getElementById("name").value;
+    alert("Hello there, " + username);
+ }
 
-   let y = a + c;
-
-    alert(y);
-
+ function stateNick() {
+    let username = document.getElementById("nickname").value;
+    alert("I see, your nickname will be " + username);
+ }
 
 </script>
 
