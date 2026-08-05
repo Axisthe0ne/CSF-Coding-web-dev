@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Story</title>
+</head>
+<style>
+    .lined{
+        border: none;
+        border-bottom: 2px solid black;
+    }
+    .filled{
+        border: none;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+<body>   
+
+    <h1>Silly Stories: Autumn</h1>
+
+    <div id="story">
+        <p>
+            There once was a fox. His name was <input type="text" id="name_of_a_relative" name="name_of_a_relative" class="lined" placeholder="Any name">. This <input type="text" id="describing_word" name="describing_word" class="lined" placeholder="Describing word"> was full of curiosity. 
+        </p>
+         <br>
+
+     <button id="submit_button" onclick="writeStory()">Submit your Story</button>
+    </div>
+    </div>
+
+    
+
+
+
+    <script>
+
+        function writeStory() {
+        
+
+            let relative_name_input = document.getElementById("name_of_a_relative");
+            let relative_name_input_value = relative_name_input.value;
+            relative_name_input.className = "filled";
+            relative_name_input.size(relative_name_input.lenght);
+
+            let describing_word_input = document.getElementById("describing_word");
+            let describing_word_input_value = describing_word_input.value;  
+            describing_word_input.className = "filled";
+        }
+        
+
