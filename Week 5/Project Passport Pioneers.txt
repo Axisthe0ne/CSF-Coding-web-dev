@@ -1,12 +1,14 @@
-Create a presentation that is 10-15 minutes of a slideshow presenting a website project
+Personal notes
+[Create a presentation that is 10-15 minutes of a slideshow presenting a website project
 demonstrate the webpage
+
 introduce your members and what country we're from
 talk of problems faced when making the website
 application that it helps improve
 demonstrate the website in a demo
 explain each website 
 
-describe what your website does
+describe what your website does:
+My initial idea is Redesigning my country's immigration website]
 
-
-My initial idea is Redesigning my country's immigration website
+Members: Xadannah Cupid, Delani Flemming, Arianna Lewis, la Shawn Streete
