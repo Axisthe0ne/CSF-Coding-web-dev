@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional and International Flights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+
+    }
+
+    .flight-container {
+        background-color: rgba(0, 0, 0);
+        overlay: 100%;
+        border-color: rgb(0, 0, 0);
+        padding: 4px;
+        margin: (2px, 2px, 2px, 2px);
+        width: 800px;
+        height: 500px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, .35);
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .yellow {
+        background-color: rgb(255, 225, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+
+
+    .blue {
+        background-color: rgb(0, 0, 255);
+        width: 100%;
+        color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .Bookings-A {
+        background-color: rgb(0, 0, 255);
+        width: 100%;
+        height: 5%;
+        gap: 100px;
+        margin-top: 10px;
+    }
+
+    .Bookings-B {
+        background-color: rgb(255, 225, 0);
+        width: 100%;
+        height: 5%;
+        gap: 10px;
+        display: flex;
+        color: black;
+    }
+
+    .Bookings-C {
+        background-color: rgb(255, 225, 0);
+        width: 100%;
+        height: 10%;
+        gap: 10px;
+        display: flex;
+        color: black;
+        text-align: center;
+
+    }
+
+    .search {
+        background-color: rgb(255, 225, 0);
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .return {
+        background-color: rgb(0, 0, 0);
+        border: 500px;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 800;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 10px;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 8px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .modal.show {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="flight-container">
+        <img src="beach.webp" style="width: 100%; height: 35%;">
+        <p> <strong>
+                <center>Flights</center>
+            </strong></p>
+        <div class="yellow"> <img src="Picture1.jpg" style="width: 50px;">
+            <P><strong>
+                    Booking made easy
+                </strong></P>
+        </div>
+
+        <div class="Bookings-A">
+            <input type="radio" name="Travel Type" id="Round Trip" style="width: 20px; height:15px;"></input>
+            <label for="Round Trip">Round Trip</label>
+            <input type="radio" name="Travel Type" id="One Way" style="width: 20px; height:15px;"></input>
+            <label for="One Way">One Way</label>
+            <input type="radio" name="Travel Type" id="Multi-City" style="width: 20px; height:15px;"></input>
+            <label for="Multi-City">Multi-City</label>
+        </div>
+
+        <div class="Bookings-B" style="margin-top: 10px;">
+            <label for="From" style="width: 120px; height: 30px;">From</label>
+            <label for="To" style="width: 120px; height:30px">To</label>
+            <label for="Departure" style="width: 100px; height: 30px;">Departure</label>
+            <label for="Return" style="width: 110px; height: 30px;">Return</label>
+            <label for="Passenger & Class">Passenger & Class</label>
+        </div>
+        <div class="Bookings-C">
+            <select id="From:" name="From" style="width: 120px; height:20px;">
+                <option value="Barbados">Barbados (BGI)</option>
+                <option value="Toronto">Toronto (YYZ) </option>
+                <option value="Montreal">Montreal(Pearson)</option>
+                <option value="London">London (LHR)</option>
+                <option value="New York">New York (JFK)</option>
+                <option value="Antigua">Antiqua(ANU)</option>
+                <option value="Anguilla">Anguilla(AXA)</option>
+                <option value="Aruba">Aruba(AUA)</option>
+                <option value="Bahamas">The Bahamas(NAS)</option>
+                <option value="Cayman Islands">Cayman Islands (CYD)</option>
+                <option value="Cuba">Cuba (CMW)</option>
+                <option value="Curacao">Curacao (CUR)</option>
+                <option value="Dominica">Dominica(DOM)</option>
+                <option value="Grenada">Grenada(GND)</option>
+                <option value="Guadeloupe">Guadeloupe (PTP)</option>
+            </select>
+            <select id="To" name="To" style="width: 120px; height:20px;">
+                <option value="Barbados">Barbados (BGI)</option>
+                <option value="Toronto">Toronto (YYZ)</option>
+                <option value="Montreal">Montreal(Pearson)</option>
+                <option value="London">London (LHR)</option>
+                <option value="New York">New York (JFK)</option>
+                <option value="Antigua">Antiqua(ANU)</option>
+                <option value="Anguilla">Anguilla(AXA)</option>
+                <option value="Aruba">Aruba(AUA)</option>
+                <option value="Bahamas"> The Bahamas(NAS)</option>
+                <option value="Cayman Islands">Cayman Islands (CYD)</option>
+                <option value="Cuba">Cuba (CMW)</option>
+                <option value="Curacao">Curacao (CUR)</option>
+                <option value="Dominica">Dominica(DOM)</option>
+                <option value="Grenada">Grenada(GND)</option>
+                <option value="Guadeloupe">Guadeloupe (PTP)</option>
+
+            </select>
+            <input type="date" id="Departure date" name="Departure date" style="width: 100px; height:20px;">
+            <input type="date" id="Return date" name="Return date" style="width: 102px; height:20px;">
+
+            <select id="Passenger & Class" name="Passenger & Class" style="width: 305px; height:20px;">
+                <option value="1 Passenger, Econmomy">1 Passenger, Economy</option>
+                <option value="2 Passenger( 1 Adult, 1 Child), Economy">2 Passenger( 1 Adult, 1 Child), Economy</option>
+                <option value="1 Passenger, Econmomy">2 Passengers, Economy</option>
+                <option value="3 Passenger( 2 Adult, 1 Child), Economy">3 Passenger( 2 Adult, 1 Child), Economy</option>
+                <option value="4 Passenger( 2 adult, 2 Children), Economy">4 Passenger( 2 adult, 2 Children), Economy
+                </option>
+                <option value="5 Passenger( 2 Adult, 2 Children, 1 Infant), Economy">5 Passenger( 2 Adult, 2 Children, 1
+                    Infant), Economy</option>
+                <option value="3 Passenger( 2 Adult, 1 Child), Business">3 Passenger( 2 Adult, 1 Child), Business
+                </option>
+                <option value="4 Passenger( 2 adult, 2 Children), Business">4 Passenger( 2 adult, 2 Children), Business
+                </option>
+                <option value="2 Passenger( 1 Adult, 1 Child), Business">2 Passenger( 1 Adult, 1 Child), Business
+                </option>
+                <option value="5 Passenger( 2 Adult, 2 Children, 1 Infant), Business">5 Passenger( 2 Adult,2 Children,1
+                    Infant), Business</option>
+                <option value="1 Passenger, Business">1 Passenger, Business</option>
+                <option value="2 Passengers, Business">2 Passengers, Business</option>
+                <option value="6 Passenger( 3 Adult, 1 Child, 1 Youth, 1 Infant), Business">5 Passenger( 3 Adult, 3
+                    Child, 1 Infant), Business</option>
+
+            </select>
+        </div>
+
+        <div class="search">
+            <button id="openBtn" style=" width: 600px; height:50px">Search for flights </button>
+        </div>
+    </div>
+
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn" class="close-popup">&times;</span>
+            <h2>Welcome</h2>
+            <p> To the flight search page based on your requirements for travel.</p>
+            <p>Click here: <a id="popupLink" href="https://aircanada.com" target="_blank">Visit Air Canada Bookings
+                    site</a></p>
+            <p>Click here: <a id="popupLink" href="https://us.trip.com" target="_blank">Visit America Airlines Bookings
+                    site</a></p>
+            <p>Click here: <a id="popupLink" href="https://www.edreams.com" target="_blank">Visit LIAT Bookings site</a>
+            </p>
+            <p>Click here: <a id="popupLink" href="https://www.flightnetwork.com" target="_blank">Visit Caribbean
+                    Airways Bookings site</a></p>
+            <p>Click here: <a id="popupLink" href="https://www.onetravel.com" target="_blank">Visit British Airways
+                    Bookings site</a></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        const modal = document.getElementById("popupModal");
+        const openBtn = document.getElementById("openBtn");
+        const closeBtn = document.getElementById("closeBtn");
+
+
+        openBtn.addEventListener("click", () => {
+            modal.classList.add("show");
+        });
+
+
+        closeBtn.addEventListener("click", () => {
+            modal.classList.remove("show");
+        });
+
+    </script>
+</body>
+
+</html>
